@@ -1,6 +1,5 @@
 ###### 参考资料
-
-[代码库]: https://gitee.com/cuihaiqi/mamahao?_from=gitee_search
+https://gitee.com/cuihaiqi/mamahao?_from=gitee_search
 
 
 
