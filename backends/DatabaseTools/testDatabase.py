@@ -7,5 +7,6 @@ import logging
 
 logger = logging.getLogger("log")
 
+
 def getSql(id, sql):
 	pass
