@@ -180,7 +180,7 @@ class DemoUser(models.Model):
 
 
 # 请求头信息表
-class DemoTEstHeaders(models.Model):
+class DemoTestHeaders(models.Model):
 	id = models.AutoField(primary_key=True, null=False)
 	tpi_id = models.TextField(default="")  # 关联公共接口id
 	headers_name = models.TextField()  # 头部名称
