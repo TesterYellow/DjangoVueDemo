@@ -168,7 +168,7 @@ class DemoUser(models.Model):
 	user_type_choices = ((1, "一级权限"), (2, "二级权限"), (3, "三级权限"))
 	# username = models.CharField(max_length=50, unique=True) # 用户名，且需要保证唯一
 	# password = models.CharField(max_length=100) # 登录密码
-	user_id = models.AutoField(primary_key=60, null=False, db_index=True) # 主键：用户id
+	user_id = models.AutoField(primary_key=60, null=False, db_index=True)  # 主键：用户id
 	user_name = models.CharField(max_length=60, db_index=True)  # 用户名称
 	user_account = models.CharField(max_length=100)  # 登录账号
 	user_password = models.CharField(max_length=100)  # 用户登录密码
@@ -185,3 +185,17 @@ class DemoTestHeaders(models.Model):
 	tpi_id = models.TextField(default="")  # 关联公共接口id
 	headers_name = models.TextField()  # 头部名称
 	headers_values = models.TextField()  # 头部值
+
+
+class DemoResponseReportResult(models.Model):
+	id = models.AutoField(primary_key=True, null=False, db_index=True)  # 主键
+	plan_id = models.CharField(null=False, db_index=True, max_length=200)
+	plan_name = models.TextField(default='')  # 计划名称
+	success_case = models.TextField(default='')  # 成功用例
+	fail_case = models.TextField(default='')  # 失败用例
+	skip_case = models.TextField(default='')  # 跳过用例
+	case_total = models.TextField(default='')  # 执行总数用例
+	creat_time = models.DateTimeField(auto_now_add=True)  # 当前数据的创建时间
+	update_time = models.DateTimeField(auto_now=True)  # 当前数据的修改时间
+	timing_open_close = models.TextField(default='')  # 是否开启定时任务
+	remark = models.CharField(max_length=60, default='')  # 备注说明
